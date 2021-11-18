@@ -1,0 +1,43 @@
+public class cricketPlayer {
+
+     private double scoreRating;
+     private int highestScore;
+     private int avgRating;
+     private int playerRank;
+     private String playerName;
+     
+     public double getScoreRating() {
+         return scoreRating;
+     }
+     
+     public int getHighestScore() {
+         return highestScore;
+     }
+     public int getAvgRating() {
+         return avgRating;
+     }
+     public int getPlayerRank() {
+         return playerRank;
+     }
+     public String getPlayerName() {
+         return playerName;
+     }
+    //creating a general catch all constructor
+    public cricketPlayer ( double scoreRating, int highestScore, int avgRating,
+            int playerRank, String playerName) {
+        this.scoreRating = scoreRating;
+        this.highestScore = highestScore;
+        this.avgRating = avgRating;
+        this.playerRank = playerRank;
+        this.playerName = playerName;
+     }
+     public cricketPlayer ( double scoreRating, int highestScore, int avgRating ) {
+         this( scoreRating, highestScore, avgRating, 0, "" );
+     }
+     
+     public static void main( String[] args) {
+         cricketPlayer player = new cricketPlayer(100,90, 80, 90, "Dhoni");
+         System.out.println( player.getPlayerName());
+     }
+     
+}
