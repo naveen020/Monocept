@@ -1,0 +1,38 @@
+public class MyClass {
+
+     private double passerRating;
+     private int rushingYards;
+     private int receiveYards;
+     private int fieldGoals;
+     private double avgPunt;
+     private double avgKickoffRetur;
+     private double avgPutReturnl;
+     
+     
+     private MyClass( double passerRating, int rushingYards,  int receiveYards,
+           int fieldGoals,  double avgPunt,  double avgKickoffRetur,  double avgPutReturnl )
+     {
+         this.passerRating = passerRating;
+         this.rushingYards = rushingYards;
+         this.receiveYards = receiveYards;
+         this.fieldGoals = fieldGoals;
+         this.avgPunt = avgPunt;
+         this.avgKickoffRetur = avgKickoffRetur;
+         this.avgPutReturnl = avgPutReturnl;
+     }
+     
+     public double gerPassRating() {
+         return passerRating; 
+         
+     }
+     
+     public static MyClass createQB( double passerRating, int rushingYards ) {
+         return new MyClass ( passerRating, rushingYards, 0, 0, 0, 0, 0 );
+     }
+     
+     public static void main( String[] args) {
+         MyClass getClassDetails =  MyClass.createQB(108.8, 256);
+         System.out.println("The Rating is:" +  getClassDetails.gerPassRating() );
+     }
+    
+}
